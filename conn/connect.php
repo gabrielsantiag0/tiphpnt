@@ -7,11 +7,12 @@ $pass = "";
 $charset = "utf8";
 $port = "3306";
 
+try{
 $conn = new mysqli($host, $user,$pass,$database,$port);
 mysqli_set_charset($conn, $charset);
-
-if ($conn->connect_error){
-        echo "Atenção ERRO: ".$conn->connect_error;
+} catch (\Throwable $th){
+        echo "Atenção ERRO: ".$th;
 }
 
+// http://localhost/tiphpnt/conn/connect.php
 ?>
