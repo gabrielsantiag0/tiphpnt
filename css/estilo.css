@@ -1,10 +1,8 @@
 /*definindo nosso estilo... */
 @charset "utf8";
 
-
-
 .fundofixo{
-    background: url(../images/churrasco.jpg) no-repeat;
+    background: url('../images/fundoMaior.jpg') no-repeat;
     -webkit-background-size:cover;
     background-size: cover;
 }
