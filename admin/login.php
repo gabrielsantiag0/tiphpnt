@@ -1,39 +1,37 @@
-<?php 
-    include "../conn/connect.php";
-
-    // iniciar a verificação/validação do login
-    if ($_POST){
-        $login = $_POST['login_usuario'];
-        $senha = $_POST['senha_usuario'];
-        $loginRes = $conn -> query(" select * from tbusuarios where login_usuario = '$login' and senha_usuario = md5('$senha') ");
-        $rowLogin = $loginRes -> fetch_assoc();
-        $numRow = mysqli_num_rows($loginRes);
-
-        // se a sessão não exister 
-        if(!isset($_SESSION)){
-            $sessaoAntiga = session_name('chulettaaa');
-            session_start();
-            $session_name_new = session_name();
-        }
-        if($numRow > 0 ){
-            $_SESSION['login_usuario'] = $login;
-            $_SESSION['nivel_usuario'] = $rowLogin ['nivel_usuario'];
-            $_SESSION['nome_da_sessao'] = session_name();
-            if($rowLogin ['nivel_usuario'] == 'sup' ){
-                echo "<script>window.open('index.php','_self')</script>";
-
+    <?php 
+        include '../conn/connect.php';
+        //iniciar a verificaçao do login
+        if($_POST){
+            $login = $_POST['login_usuario'];
+            $senha = $_POST['senha_usuario'];
+            $loginRes = $conn->query("select * from tbusuarios where login_usuario = '$login' and senha_usuario = md5('$senha')");
+            $rowLogin = $loginRes->fetch_assoc();
+            $numRow = mysqli_num_rows($loginRes);
+            //se a sessao nao existir 
+            print_r($rowLogin);
+            if(!isset($_SESSION)){
+                $sessaoAntiga = session_name('chulettaaa');
+                session_start();
+                $session_name_new =  session_name();
             }
-            else{
-                echo "<script>window.open('../cliente/index.php?cliente=".$login."','_self')</script>";
+            if($numRow>0){
+                $_SESSION['login_usuario'] = $login;
+                $_SESSION['nivel_usuario'] = $rowLogin['nivel_usuario'];
+                $_SESSION['nome_da_sessao'] = session_name();
+                if($rowLogin['nivel_usuario']=='sup'){
+                    echo "<script>window.open('index.php','_self')</script>";
+                }
+                else{
+                    echo "<script>window.open('../cliente/index.php?cliente=".$login."','_self')</script>";
+                }
+            } else{
+                echo "<script>window.open('invasor.php','_self')</script>";
             }
-        }else{
-        echo "<script>window.open('invasor.php','_self')</script>";
         }
-    }
-?>
-
+    ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="30;URL=../index.php">
@@ -42,8 +40,10 @@
     <script src="https://kit.fontawesome.com/2495680ceb.js" crossorigin="anonymous"></script>
     <!-- Link para CSS específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css" type="text/css">
-    <title>Churrascaria - Login</title>
+    
+    <title>Chuleta Quente - Login</title>
 </head>
+
 <body>
     <main class="container">
         <section>
