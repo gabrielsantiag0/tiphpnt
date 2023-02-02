@@ -103,15 +103,15 @@
                 </div>
                 
         </div>  
-        <div class="col-ms-12">
-                    <div class="panel-footer" style="background: none;">
+        <div class="col-sm-12">
+            <div class="panel-footer" style="background: none;">
                 <h6 class="text-danger text-center">
-                    Desenvolvido por Gabriel santiago; 2023
+                    Desenvolvido por Gabriel santiago&trade; 2023
                     <br>
-                    <a href="https://www.gabrielsantiago.com.br" target="_blank">gabrielsantiago.com.br</a>
+                    <a href="www.gabrielleandrosantiago@gmail.com" target="_blank">gabrielleandrosantiago</a>
                 </h6>
             </div>
-                </div>      
+        </div>
 </div>
 </body>
 </html>
