@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
-<body class="fundofixo"> 
+<body> 
     <?php include "menu_adm.php"; ?>
     <main class="container">
         <h2 class="breadcrumb alert-danger" >Lista de Produtos </h2>
