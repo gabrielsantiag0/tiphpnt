@@ -67,8 +67,24 @@ if (isset($_POST['enviar'])){
                 </h2> 
     <div class="humbnail">
         <div class="alert alert-danger" role="alert">
-        <form action="tipos_insere.php" method="post" name="form_tipos_insere" enctype="multipart/form-data" id="form_produto_insere" >
-
+        <form action="tipos_insere.php" method="post" name="form_tipos_insere" enctype="multipart/form-data" id="form_tipos_insere" >
+            <label for="id_tipo">SIGLA:</label>
+            <div class="input-group">
+                 <span class="input-group-addon">
+                <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+                </span>
+                <input type="text" name="sigla_tipo" id="sigla_tipo" class="form-control" placeholder="Digite a Sigla do tipo" maxlength="100" required>
+                </div>
+            <label for="id_tipo">ROTULO:</label>
+            <div class="input-group">
+                 <span class="input-group-addon">
+                <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+                </span>
+                <input type="text" name="rotulo_tipo" id="rotulo_tipo" class="form-control" placeholder="Digite o Rotulo" maxlength="100" required>
+                </div>
+                <br>
+                     <input type="submit" name="enviar" id="enviar" class="btn btn-danger btn-block" value="Cadastrar">
+                </form>
         </div>
     </div>
 
