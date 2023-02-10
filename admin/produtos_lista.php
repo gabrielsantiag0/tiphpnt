@@ -66,7 +66,7 @@
                             <img src="../images/<?php echo $row['imagem_produto']?>" width="100px">
                         </td>
                         <td >
-                            <a href="produto_atualiza.php?id_produto=<?php echo $row['id_produto'];?>" role="button" class="btn btn-warning btn-block btn-xs">
+                            <a href="produtos_atualiza.php?id_produto=<?php echo $row['id_produto'];?>" role="button" class="btn btn-warning btn-block btn-xs">
                             <span class="glyphicon glyphicon-refresh"></span>
                                 <span class="hidden-xs">ALTERAR</span>
                             </a>
@@ -107,7 +107,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
