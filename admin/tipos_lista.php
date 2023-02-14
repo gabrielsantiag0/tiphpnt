@@ -81,7 +81,7 @@
                     <h4><span class="nome text-danger"></span></h4>
                 </div>
                 <div class="modal-footer">
-                    <a href="#" type="button" class="btn btn-danger delete-yes">
+                    <a href="tipos_lista.php" type="button" class="btn btn-danger delete-yes">
                         Confirmar
                     </a>
                     <button class="btn btn-success" data-dismiss="modal">
