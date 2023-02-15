@@ -51,6 +51,9 @@
                     <li><a href="index.php#contato" class="text-danger"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Contato</a></li>
 
                     <li><a href="admin/index.php" class="text-danger"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Administraçao</span></a></li>
+ 
+                    <li><a href="reservas.php" class="text-danger"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Reserva</span></a></li>
+
                 </ul>
 </div>
                 </div>

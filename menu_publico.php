@@ -10,7 +10,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">    
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/menupublico.css">   
     <title>Menu Público</title>
 </head>
 <body>
@@ -26,12 +27,15 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="index.php" class="navbar-brand"></a>
-                <img src="images/logo - Copia.png" alt="Logotipo">
+                <img class="logo" src="images/logo - Copia.png" alt="Logotipo">
             </div>
             <!-- fecha agrupamento mobile  -->
             <!-- nav direita  -->
             <div class="collapse navbar-collapse" id="menupublico">
                 <ul class="nav navbar-nav navbar-right">
+                <li class=" reserva">
+                       <a class="textoreserva " href="reservas.php">Reservas</a>
+                    </li>
                     <li class="active">
                         <a href="index.php">
                             <span class="glyphicon glyphicon-home"></span>

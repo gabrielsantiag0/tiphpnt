@@ -81,7 +81,7 @@
                     <h4><span class="nome text-danger"></span></h4>
                 </div>
                 <div class="modal-footer">
-                    <a href="tipos_lista.php" type="button" class="btn btn-danger delete-yes">
+                    <a href="#" type="button" class="btn btn-danger delete-yes">
                         Confirmar
                     </a>
                     <button class="btn btn-success" data-dismiss="modal">
@@ -100,7 +100,7 @@
         var id = $(this).data('id'); // busca o id (data-id)
         //console.log(id + ' - ' + nome); //exibe no console
         $('span.nome').text(nome); // insere o nome do item na confirmação
-        $('a.delete-yes').attr('href','tipos_lista.php?id_produto='+id); //chama o arquivo php para excluir o produto
+        $('a.delete-yes').attr('href','tipos_excluir.php?id_tipo='+id); //chama o arquivo php para excluir o produto
         $('#modalEdit').modal('show'); // chamar o modal
     });
 </script>

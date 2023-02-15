@@ -1,0 +1,1 @@
+alert("se fazer reservas no restaurante oferecendo sobremesa grátis para o titular da reserva e 10% de desconto em todas as bebidas da comada da mesa associada a reserva")

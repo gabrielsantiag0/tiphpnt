@@ -15,7 +15,7 @@
     <a name="home">&nbsp;</a>
     <main class="container">
         <!-- inicio carousel -->
-        <?php include 'carousel.php'; ?>
+        <?php include 'carousel.php';?>
         <!-- inicio area de destaque -->
         <a name="destaques">&nbsp;</a>
         <?php include 'produtos_destaque.php'; ?>

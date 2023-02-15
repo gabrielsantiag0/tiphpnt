@@ -19,8 +19,8 @@ $rows = $lista->num_rows;
 <body> 
     <?php include "menu_adm.php"; ?>
     <main class="container">
-        <h2 class="breadcrumb alert-danger" >Tipos de Produtos</h2>
-        <table class="table table-hover table-condensed tb-opacidade"> 
+        <h2 class="breadcrumb alert-danger" >Lista de usuarios </h2>
+        <table class="table table-hover table-condensed tb-ocapicade">
             <thead>
                 <th class="hidden">ID</th>
                 <th>USUARIO</th> 
@@ -38,9 +38,8 @@ $rows = $lista->num_rows;
            	<!-- início estrutura repetição -->
             <?php do{?>
                     <tr>
-                        <td class="hidden">  
-                            <?php echo $row['id_usuario'];?></td>
-                      
+                        <td class="hidden"></td>
+                        <?php echo $row['id_usuario'];?>
                         <td>
                         <?php echo $row['login_usuario'];?>
                         <span class="visible-xs"></span>
@@ -113,5 +112,4 @@ $rows = $lista->num_rows;
         $('#modalEdit').modal('show'); // chamar o modal
     });
 </script>
-
 </html>
