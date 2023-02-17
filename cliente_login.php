@@ -2,9 +2,9 @@
         include '../tiphpnt/conn/connect.php';
         //iniciar a verificaçao do login
         if($_POST){
-            $email = $_POST['email'];
-            $cpf = $_POST['cpf'];
-            $loginRes = $conn->query("select * from login_cliente where email = '$email' and cpf = '$cpf'");
+            $email = $_POST['email_cliente'];
+            $cpf = $_POST['cpf_cliente'];
+            $loginRes = $conn->query("select * from reserva where email_cliente = '$email' and cpf_cliente = '$cpf'");
             $rowLogin = $loginRes->fetch_assoc();
             $numRow = mysqli_num_rows($loginRes);
             //se a sessao nao existir 
@@ -15,7 +15,7 @@
                 $session_name_new =  session_name();
             }
             if($numRow>0){
-                $_SESSION['email'] = $email;
+                $_SESSION['email_cliente'] = $email;
                 $_SESSION['nivel_usuario'] = $rowLogin['nivel_usuario'];
                 $_SESSION['nome_da_sessao'] = session_name();
                 if($rowLogin['nivel_usuario']=='sup'){

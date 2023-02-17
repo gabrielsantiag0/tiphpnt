@@ -1,3 +1,17 @@
+<?php 
+    include '../tiphpnt/conn/connect.php';
+    if($_POST){
+        $nome = $_POST['nome_cliente'];
+        $cpf = $_POST['cpf_cliente'];
+        $email = $_POST['email_cliente'];
+        $insereserva = "INSERT INTO reserva
+                    (nome_cliente, cpf_cliente, email_cliente)
+                    VALUES
+                    ('$nome','$cpf','$email')
+                    ";
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -51,7 +65,7 @@
                                 </span>
 
                             </span>
-                            <input type="text" name="nome_reserva" placeholder="digite seu Nome Completo" aria-describedby="basic-addon1" class="form-control" required>
+                             <input type="text" name="nome_reserva" placeholder="digite seu Nome Completo" aria-describedby="basic-addon1" class="form-control" required>
                         </span>
                     </p>
                     <p>
@@ -77,10 +91,11 @@
                         </span>
                     </p>
                     <p>
-                        <button class="btn btn-danger btn-block" aria-label="enviar" role="button">Enviar
+                    <input type="submit" name="enviar" id="enviar"
+                             class="btn btn-danger btn-block" value="Realizar Reserva">
+                        <!-- <button class="btn btn-danger btn-block" aria-label="enviar" role="button">
                         <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
-
-                        </button>
+                        </button> -->
                     </p>
                     </form>
                     <div class="panel-footer">
