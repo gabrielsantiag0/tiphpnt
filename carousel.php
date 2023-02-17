@@ -14,10 +14,10 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="images/Sem título77.png" alt="" class="center-block">
+                <img src="images/parte1promo.png" alt="" class="center-block">
             </div>
             <div class="item ">
-                <img src="images/Sem título77.png" alt="" class="center-block">
+                <img src="images/parte2promo.png" alt="" class="center-block">
             </div>
             <div class="item ">
                 <img src="images/Sem título77.png" alt="" class="center-block">

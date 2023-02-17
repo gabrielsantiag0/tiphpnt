@@ -54,7 +54,7 @@
  
                     <li><a href="reservas.php" class="text-danger"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Reserva</span></a></li>
 
-                    <li><a href="reservas.php" class="text-danger"><span class="glyphicon glyphicon-cutlery" aria-hidden="true">&nbsp;Acompanhar Reserva</span></a></li>
+                    <li><a href="cliente_login.php" class="text-danger"><span class="glyphicon glyphicon-cutlery" aria-hidden="true">&nbsp;Acompanhar Reserva</span></a></li>
 
                 </ul>
 </div>
