@@ -1,18 +1,9 @@
 .reserva{
     background-color: rgb(167, 6, 6);
-    margin-right: 400px;
     border-radius: 2px;
 }
-.textoreserva{
-    font-size: 22px;
-}
-.textoreserva a{
-    color: aliceblue;
-}
-main{
-  
-    background-color: #f1f1f1f1;
-}
+.textoreserva a{color: aliceblue;}
+main{background-color: #f1f1f1f1;}
 .textofacaumareserva{
     margin-top: 100px;
     margin-left: 20%;
@@ -21,9 +12,7 @@ main{
 .corpo{
     margin: 0%;
 }
-.textofacaumareserva p{
-    margin-top: 15px;
-}
+.textofacaumareserva p{margin-top: 15px;}
 li{
     margin-right: 10px;
     font-size: 15px;
@@ -33,30 +22,40 @@ li{
     grid-template-columns: 1fr 1fr;
         background-color: #f1f1f1f1;
 }
-.imglugardentro{
-        margin: 25px;
-}
+.imglugardentro{margin: 25px;}
 .imglugardentro img{
         border: 1px solid #f1f1f1f1;
         border-radius: 25px;
 }
-#cpf{
-    margin: 15px;
-}
-.textoo{
-    text-align: center;
-}
+#cpf{margin: 15px;}
+.textoo{text-align: center;}
 .form_reservaaa{
     background-color: #f5f5f5;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     border: 1px solid #f1f1f1f1;
 }
 #form_reserva{
     margin: 15px;
     width: 300px;
 }
-.link a{
+.form_reservaaa{
+    display: flex;
+    justify-content: space-around;
+}
+.link a{ 
     color: white;
     text-decoration: none;
+}
+.b1{margin-right: 15px;}
+.b2{margin: 15px;}
+.b3{margin: 15px;}
+.b4{margin: 15px;}
+.b5{margin: 15px;}
+.b6{margin: 15px;}
+.b7{margin-left: 15px;}
+
+a{
+    text-decoration: none;
+}
+.botao button{
+    border: none;
 }

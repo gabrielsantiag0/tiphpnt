@@ -79,8 +79,9 @@
                                         </span>
                                         <input type="password" name="senha_usuario" id="senha_usuario" class="form-control" required autocomplete="off" placeholder="Digite sua senha.">
                                     </p>
-                                    <p class="text-right">
-                                        <input type="submit" value="Entrar" class="btn btn-primary">
+                                    <p>
+                                    <input type="submit" value="Entrar" class="btn btn-primary">
+                                 <a href="registrar-se.php"><input type="submit" value="Registrar" class="btn btn-primary"></a>
                                     </p>
                                 </form>
                                 <p class="text-center">

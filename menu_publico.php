@@ -33,9 +33,6 @@
             <!-- nav direita  -->
             <div class="collapse navbar-collapse" id="menupublico">
                 <ul class="nav navbar-nav navbar-right">
-                <li class=" reserva">
-                       <a class="textoreserva " href="reservas.php">Reservas</a>
-                    </li>
                     <li class="active">
                         <a href="index.php">
                             <span class="glyphicon glyphicon-home"></span>
@@ -79,6 +76,9 @@
                     <a href="admin/index.php">
                         <span class="glyphicon glyphicon-user">&nbsp;ADMIN/CLIENTE</span>
                     </a>
+                    </li>
+                      <li class=" reserva">
+                       <a class="textoreserva " href="reservas.php">Faça sua reserva</a>
                     </li>
                 </ul>
             </div>

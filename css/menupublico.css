@@ -1,10 +1,6 @@
 .reserva{
     background-color: rgb(167, 6, 6);
-    margin-right: 400px;
-    border-radius: 2px;
-}
-.textoreserva{
-    font-size: 22px;
+    border-radius: 5px;
 }
 .textoreserva a{
     color: aliceblue;

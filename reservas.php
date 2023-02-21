@@ -1,17 +1,3 @@
-<?php 
-    include '../tiphpnt/conn/connect.php';
-    if($_POST){
-        $nome = $_POST['nome_cliente'];
-        $cpf = $_POST['cpf_cliente'];
-        $email = $_POST['email_cliente'];
-        $insereserva = "INSERT INTO reserva
-                    (nome_cliente, cpf_cliente, email_cliente)
-                    VALUES
-                    ('$nome','$cpf','$email')
-                    ";
-    }
-
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -23,7 +9,7 @@
 </head>
 <body>
 <body>
-<?php include 'menu_publico.php'; ?>
+    <?php include 'menu_publico.php';?>
         <div class="separando">
     <main>
         <div class="textofacaumareserva"><p><b>Faça Sua</b> Reserva</p>
@@ -46,9 +32,10 @@
         <li>
             As reservas terão tolerância de no mínimo 48 horas de antecedência e no máximo 90 dias.
         </li>
-    </ul>
-    </div>
-        </div>
+    </ul> <a href="inserindo_reservas.php">
+    <input type="submit" name="enviar" id="enviar"
+                             class="btn btn-danger btn-block" value="Faça sua Reserva">
+                              </a>  
     </main>
     <div class="imglugardentro"><img src="images/dentrochurascaria.jpg" alt=""></div>
 </div>  
@@ -56,66 +43,24 @@
     <div class="textoo"><h1>RESERVA</h1></div> 
     <hr>
 <div class="form_reservaaa">
-    <form action="" name="form_reserva" id="form_reserva" method="post">
-                        <p>
-                            <span class="input-group">
-                            <span class="input-group-addon" id="basic-addon1">
-                                <span class="glyphicon glyphicon-user">
-
-                                </span>
-
-                            </span>
-                             <input type="text" name="nome_reserva" placeholder="digite seu Nome Completo" aria-describedby="basic-addon1" class="form-control" required>
-                        </span>
-                    </p>
-                    <p>
-                            <span class="input-group">
-                            <span class="input-group-addon" id="basic-addon1">
-                                <span class="glyphicon glyphicon-user">
-
-                                </span>
-                                
-                            </span>
-                            <input type="text" name="cpf_reserva" placeholder="digite seu nome CPF" aria-describedby="basic-addon1" class="form-control" required>
-                        </span>
-                    </p>
-                    <p>
-                            <span class="input-group">
-                            <span class="input-group-addon" id="basic-addon2">
-                                <span class="glyphicon glyphicon-envelope">
-
-                                </span>
-                                
-                            </span>
-                            <input type="text" name="email_reserva" placeholder="digite seu nome Email" aria-describedby="basic-addon1" class="form-control" required>
-                        </span>
-                    </p>
-                    <p>
-                    <input type="submit" name="enviar" id="enviar"
-                             class="btn btn-danger btn-block" value="Realizar Reserva">
-                        <!-- <button class="btn btn-danger btn-block" aria-label="enviar" role="button">
-                        <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
-                        </button> -->
-                    </p>
-                    </form>
                     <div class="panel-footer">
-                <ul class=" links">
+                <div class=" links">
                     
-                    <li><a href="index.php#home" class="text-danger"><span class="glyphicon glyphicon-home" aria-hidden="true">&nbsp;Home</span></a></li>
+                <a  href="index.php#home" class="text-danger b1"><span class="glyphicon glyphicon-home" aria-hidden="true">&nbsp;Home</span></a>
                     
-                    <li><a href="index.php#destaques" class="text-danger"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true">&nbsp;Destaques</span></a></li>
+                <a href="index.php#destaques" class="text-danger b2"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true">&nbsp;Destaques</span></a>
                 
-                    <li><a href="index.php#produtos" class="text-danger"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>&nbsp;Produtos</a></li>
+                <a href="index.php#produtos" class="text-danger b3"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>&nbsp;Produtos</a>
                     
-                    <li><a href="index.php#contato" class="text-danger"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Contato</a></li>
+                <a href="index.php#contato" class="text-danger b4"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Contato</a>
 
-                    <li><a href="admin/index.php" class="text-danger"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Administraçao</span></a></li>
+                <a href="admin/index.php" class="text-danger b5"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Administraçao</span></a>
  
-                    <li><a href="reservas.php" class="text-danger"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Reserva</span></a></li>
+                <a href="reservas.php" class="text-danger b6"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Reserva</span></a>
 
-                    <li><a href="reservas.php" class="text-danger"><span class="glyphicon glyphicon-cutlery" aria-hidden="true">&nbsp;Acompanhar Reserva</span></a></li>
+                <a href="" class="text-danger b7"><span class="glyphicon glyphicon-cutlery" aria-hidden="true">&nbsp;Acompanhar Reserva</span></a>
 
-                </ul>
+                </div>
 </div>
                     
 </div>
