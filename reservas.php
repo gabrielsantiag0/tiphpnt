@@ -34,7 +34,7 @@
         </li>
     </ul> <a href="inserindo_reservas.php">
     <input type="submit" name="enviar" id="enviar"
-                             class="btn btn-danger btn-block" value="Faça sua Reserva">
+                             class="btn btn-danger btn-block" value="Reserva">
                               </a>  
     </main>
     <div class="imglugardentro"><img src="images/dentrochurascaria.jpg" alt=""></div>

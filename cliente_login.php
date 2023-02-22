@@ -2,9 +2,9 @@
         include '../tiphpnt/conn/connect.php';
         //iniciar a verificaçao do login
         if($_POST){
-            $email = $_POST['email_cliente'];
-            $cpf = $_POST['cpf_cliente'];
-            $loginRes = $conn->query("select * from reserva where email_cliente = '$email' and cpf_cliente = '$cpf'");
+            $email = $_POST['email'];
+            $cpf = $_POST['cpf'];
+            $loginRes = $conn->query("select * from pedidos_reservas where email = '$email' and cpf = '$cpf'");
             $rowLogin = $loginRes->fetch_assoc();
             $numRow = mysqli_num_rows($loginRes);
             //se a sessao nao existir 
@@ -15,8 +15,8 @@
                 $session_name_new =  session_name();
             }
             if($numRow>0){
-                $_SESSION['email_cliente'] = $email;
-                $_SESSION['nivel_usuario'] = $rowLogin['nivel_usuario'];
+                $_SESSION['email'] = $email;
+                $_SESSION['nivel'] = $rowLogin['nivel_usuario'];
                 $_SESSION['nome_da_sessao'] = session_name();
                 if($rowLogin['nivel_usuario']=='sup'){
                     echo "<script>window.open('index.php','_self')</script>";
@@ -29,6 +29,12 @@
             }
         }
     ?>
+
+<?php 
+    $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+    var_dump($dados)
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -100,7 +106,7 @@
 
 
     <!-- Link arquivos Bootstrap js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <script src="../js/bootstrap.min.js"></script>
 </body>
 
