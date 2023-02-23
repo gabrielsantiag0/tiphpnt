@@ -7,7 +7,7 @@
     $data_reserva = $_POST['data_reserva'];
     $hora = $_POST['hora'];
 
-    $inserereservas = "INSERT INTO reservas
+    $inserereservas = "INSERT reservas
                    (id_reservas, n_messa, n_pessoas, data_reserva, hora)
                     VALUES
                     ('$id_reservas','$n_messa','$n_pessoas','$data_reserva','$hora')
@@ -24,15 +24,13 @@
      VALUES
      ('$id_pedidos_reservas','$cpf','$nome','$email')
      ";
-
     $resultado = $conn -> query($inserereservas, $inserecliente);
     // após a gravação bem sucedida do produto, volta (atualiza) lista.
     if(mysqli_insert_id($conn)){
         header('location: cliente_login.php');
     }
-
-    }
-
+    
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -57,7 +55,7 @@
                 </h2>   
                 <div class="humbnail">
                     <div class="alert alert-danger" role="alert">
-                        <form action="cliente_login.php" method="post" name="form_inserindo_reservas"
+                        <form action="inserindo_reservas.php" method="post" name="form_inserindo_reservas"
                          enctype="multipart/form-data" id="form_inserindo_reservas" >
                          <div class="hidden"> <label for="id_reserva">Id Reserva: </label>
                             <div class="input-group">
