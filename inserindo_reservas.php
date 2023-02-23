@@ -1,5 +1,5 @@
 <?php 
-    include '../tiphpnt/conn/connect.php';
+    include '/xampp1/htdocs/tiphpnt/conn/connect.php';
     if($_POST){
     $id_reservas = $_POST['id_reservas'];
     $n_messa = $_POST['n_messa'];
