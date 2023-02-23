@@ -1,5 +1,5 @@
 <?php 
-    include '/xampp1/htdocs/tiphpnt/conn/connect.php';
+    include '../tiphpnt/conn/connect.php';
     if($_POST){
     $id_reservas = $_POST['id_reservas'];
     $n_messa = $_POST['n_messa'];
@@ -25,7 +25,7 @@
      ('$id_pedidos_reservas','$cpf','$nome','$email')
      ";
     $resultado = $conn -> query($inserereservas, $inserecliente);
-    // após a gravação bem sucedida do produto, volta (atualiza) lista.
+    // após a gravação bem sucedida da reserva, vai para login.
     if(mysqli_insert_id($conn)){
         header('location: cliente_login.php');
     }
@@ -55,7 +55,7 @@
                 </h2>   
                 <div class="humbnail">
                     <div class="alert alert-danger" role="alert">
-                        <form action="inserindo_reservas.php" method="post" name="form_inserindo_reservas"
+                        <form action="cliente_login.php" method="post" name="form_inserindo_reservas"
                          enctype="multipart/form-data" id="form_inserindo_reservas" >
                          <div class="hidden"> <label for="id_reserva">Id Reserva: </label>
                             <div class="input-group">

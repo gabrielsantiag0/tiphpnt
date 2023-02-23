@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS `pedidos_reservas` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `reservas` (
   `id_reservas` INT(11) NOT NULL,
-  `n_messa` DECIMAL(10,5) NULL DEFAULT NULL,
-  `n_pessoas` DECIMAL(10,5) NULL DEFAULT NULL,
-  `data_reserva` DATETIME NULL DEFAULT NULL,
-  `hora` DATE NULL DEFAULT NULL,
+  `n_messa` VARCHAR(100) NULL DEFAULT NULL,
+  `n_pessoas` VARCHAR(100) NULL DEFAULT NULL,
+  `data_reserva` DATE NULL DEFAULT NULL,
+  `hora` TIME NULL DEFAULT NULL,
   PRIMARY KEY (`id_reservas`));
