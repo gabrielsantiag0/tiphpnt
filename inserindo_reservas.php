@@ -1,35 +1,31 @@
 <?php 
     include '../tiphpnt/conn/connect.php';
     if($_POST){
-    $id_reservas = $_POST['id_reservas'];
+
     $n_messa = $_POST['n_messa'];
     $n_pessoas = $_POST['n_pessoas'];
     $data_reserva = $_POST['data_reserva'];
     $hora = $_POST['hora'];
 
-    $inserereservas = "INSERT reservas
-                   (id_reservas, n_messa, n_pessoas, data_reserva, hora)
-                    VALUES
-                    ('$id_reservas','$n_messa','$n_pessoas','$data_reserva','$hora')
-                    ";
-
-    $id_pedido_reserva = $_POST['id_pedidos_reservas'];
     $cpf = $_POST['cpf'];
     $nome = $_POST['nome'];
     $email = $_POST['email'];
 
-
-    $inserecliente = "INSERT INTO pedidos_reservas
-    (id_pedidos_reservas, cpf, nome, email)
+    $inserereservas = "INSERT reservas
+                   (n_messa, n_pessoas, data_reserva, hora)
+                    VALUES
+                    ('$n_messa','$n_pessoas','$data_reserva','$hora'))
+                    ";
+    $inserecliente = "INSERT pedidos_reservas
+    (cpf, nome, email)
      VALUES
-     ('$id_pedidos_reservas','$cpf','$nome','$email')
+     ('$cpf','$nome','$email'))
      ";
-    $resultado = $conn -> query($inserereservas, $inserecliente);
+    $resultado = $conn->query($inserereservas, $inserecliente);
     // após a gravação bem sucedida da reserva, vai para login.
     if(mysqli_insert_id($conn)){
         header('location: cliente_login.php');
     }
-    
 }
 ?>
 <!DOCTYPE html>
@@ -39,7 +35,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../tiphpnt/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilo.css">
-    <title>Tipos - Lista</title>
+    <title>Reserva</title>
 </head>
 <body>
     <main class="container">
@@ -57,15 +53,6 @@
                     <div class="alert alert-danger" role="alert">
                         <form action="cliente_login.php" method="post" name="form_inserindo_reservas"
                          enctype="multipart/form-data" id="form_inserindo_reservas" >
-                         <div class="hidden"> <label for="id_reserva">Id Reserva: </label>
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                                </span>
-                                <input type="text" name="id_reserva" id="id_reserva" 
-                                class="form-control" placeholder="Digite o nome do Usuario"
-                                 maxlength="100" required>
-                            </div></div>
                             <div class="hidden"> <label for="n_messa">Numero da Messa: </label>
                             <div class="input-group">
                                 <span class="input-group-addon">
@@ -102,15 +89,6 @@
                                 class="form-control" placeholder="Digite a Hora da Reserva"
                                  maxlength="100" required>
                             </div>
-                            <div class="hidden"> <label for="id_pedidos_reservas">Id pedido Reserva: </label>
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                                </span>
-                                <input type="number" name="id_pedidos_reservas" id="id_pedidos_reservas" 
-                                class="form-control" placeholder="Digite o id pedido reserva"
-                                 maxlength="100" required>
-                            </div></div>
                             <label for="cpf">Cpf: </label>
                             <div class="input-group">
                                 <span class="input-group-addon">
@@ -138,11 +116,10 @@
                                 class="form-control" placeholder="Digite o Seu Email" 
                                 maxlength="100" required>
                             </div>
-                            </div>
-                           
                             <br>
                             <input type="submit" name="enviar" id="enviar"
                              class="btn btn-danger btn-block" value="Cadastrar">
+                            </div>
                         </form>
                     </div>
                 </div> 
