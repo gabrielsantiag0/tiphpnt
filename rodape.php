@@ -1,54 +1,4 @@
-<?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 
-//Load Composer's autoloader
-require 'vendor/autoload.php';
-
-
-if(isset($_POST['enviar'])){
-    // code..
-}
-$mail = new PHPMailer(true);
-
-try {
-    //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'gabrielleandrosantiago9@gmail';                     //SMTP username
-    $mail->Password   = 'pmlovvsnxjxymgnk';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
-    //Recipients
-    $mail->setFrom('gabrielleandrosantiago9@gmail', 'gabriel');
-    $mail->addAddress('gabrielleandrosantiago9@gmail', 'Joe User');     //Add a recipient
-    $mail->addReplyTo('info@example.com', 'Information');
-    $mail->isHTML(true);                                 
-    $mail->Subject = 'mensagem via site - churrascaria';
-
-    $body = 'Mensagem enviada através do Site, segue informaçoes abaixo:<br>
-    Nome: $_POST["nome"]<br>
-    E-mail: $_POST["email"]<br>
-    Mensagem:<br>
-    $_POST["msg"]<br>';
-
-
-
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
-
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -133,13 +83,13 @@ try {
                                 </span>
                                 
                             </span>
-                            <input type="text" name="email_contato" placeholder="digite seu nome" aria-describedby="basic-addon1" class="form-control" required>
+                            <input type="text" name="email_contato" placeholder="digite seu e-mail" aria-describedby="basic-addon1" class="form-control" required>
                         </span>
                     </p>
                     <p>
                             <span class="input-group">
                             <span class="input-group-addon" id="basic-addon3">
-                                <span class="glyphicon glyphicon-pencil">
+                                <span  class="glyphicon glyphicon-pencil">
 
                                 </span>
                                 
@@ -148,14 +98,14 @@ try {
                             </textarea>
                         </span>
                     </p>
-                    <form action="email.php" method="post"> 
+                 
                     <p>
-                        <button class="btn btn-danger btn-block" aria-label="enviar" role="button">Enviar
+                        <button name="enviar" class="btn btn-danger btn-block" aria-label="enviar" role="button">Enviar
                         <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
 
                         </button>
                     </p>
-                    </form>
+                
                     </form>
                 </div>
                 

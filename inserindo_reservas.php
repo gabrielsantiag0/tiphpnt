@@ -21,7 +21,7 @@
      VALUES
      ('$cpf','$nome','$email'))
      ";
-    $resultado = $conn->query($inserereservas, $inserecliente);
+    $resultado = $conn->query($inserereservas .$inserecliente);
     // após a gravação bem sucedida da reserva, vai para login.
     if(mysqli_insert_id($conn)){
         header('location: cliente_login.php');
