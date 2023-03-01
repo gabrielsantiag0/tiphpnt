@@ -41,8 +41,7 @@
                     <div class="alert alert-danger" role="alert">
                         <form action="usuario_insere.php" method="post" name="form_usuario_insere"
                          enctype="multipart/form-data" id="form_usuario_insere" >
-                            </div>
-                            <label for="login_usuario">Login: </label>
+                         <label for="login_usuario">Login: </label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
@@ -72,6 +71,7 @@
                             <br>
                             <input type="submit" name="enviar" id="enviar"
                              class="btn btn-danger btn-block" value="Cadastrar">
+                            </div>
                         </form>
                     </div>
                 </div> 

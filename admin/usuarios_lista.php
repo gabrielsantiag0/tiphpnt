@@ -19,9 +19,9 @@ $rows = $lista->num_rows;
 <body> 
     <?php include "menu_adm.php"; ?>
     <main class="container">
+        <table class="table table-hover table-condensed tb-opacidade alert-danger"> 
         <h2 class="breadcrumb alert-danger" >Tipos de Produtos</h2>
-        <table class="table table-hover table-condensed tb-opacidade"> 
-            <thead>
+        <thead>
                 <th class="hidden">ID</th>
                 <th>USUARIO</th> 
                 <th>SENHA - MD5</th>
@@ -32,9 +32,7 @@ $rows = $lista->num_rows;
                         <span class="hidden-xs">ADICIONAR</span>
                     </a>
                 </th>
-            </thead>
-            
-            <tbody> <!-- início corpo da tabela -->
+                <tbody> <!-- início corpo da tabela -->
            	<!-- início estrutura repetição -->
             <?php do{?>
                     <tr>
@@ -75,6 +73,7 @@ $rows = $lista->num_rows;
             </tbody><!-- final corpo da tabela -->
         </table>
     </main>
+            </thead>       
     <!-- inicio do modal para excluir... -->
     <div class="modal fade" id="modalEdit" role="dialog">
         <div class="modal-dialog">

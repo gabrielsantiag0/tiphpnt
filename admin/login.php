@@ -76,6 +76,9 @@
                                         <input type="submit" value="Entrar" class="btn btn-primary">
                                     </p>
                                 </form>
+                                <p class="text-right">
+                                     <a href=""><input type="submit" value="Cadastrar-se" class="btn btn-primary"></a>
+                                    </p>
                                 <p class="text-center">
                                     <small>
                                         <br>

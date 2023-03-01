@@ -62,8 +62,7 @@
                     <div class="alert alert-danger" role="alert">
                         <form action="usuario_atualiza.php" method="post" name="form_usuario_atualiza"
                          enctype="multipart/form-data" id="form_usuario_atualiza" >
-                            </div>
-                            <label for="login_usuario">Login: </label>
+                         <label for="login_usuario">Login: </label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
@@ -93,6 +92,7 @@
                             <br>
                             <input type="submit" name="atualizar" id="atualizar" class="btn btn-danger btn-block" value="Atualizar">
 
+                            </div>
                         </form>
                     </div>
                 </div> 
