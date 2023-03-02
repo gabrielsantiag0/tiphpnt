@@ -77,7 +77,7 @@
                                     </p>
                                 </form>
                                 <p class="text-right">
-                                     <a href=""><input type="submit" value="Cadastrar-se" class="btn btn-primary"></a>
+                                     <a href="cadastrar.php"><input type="submit" value="Cadastrar-se" class="btn btn-primary"></a>
                                     </p>
                                 <p class="text-center">
                                     <small>
