@@ -9,3 +9,9 @@
 .logo{
     margin-top: 15px;
 }
+
+.fundoo{
+    background: url('../images/dentrochurascaria.jpg') no-repeat;
+    -webkit-background-size:cover;
+    background-size: cover;
+}

@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
     <!-- Link para CSS específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css" type="text/css">
 </head>
@@ -17,7 +18,7 @@
 <div class="row"><!-- manter os elementos na linha -->
 
 <!-- ADM PRODUTOS -->
-<div class="col-sm-6 col-md-4">
+<div class="col-sm-6 col-md-4" id="areatrabalho">
     <div class="thumbnail alert-danger">
         <img src="../imagens/icone_produtos.png" alt="">
         <br>
