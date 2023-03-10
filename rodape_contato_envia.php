@@ -1,63 +1,48 @@
 <?php
-   use PHPMailer\PHPMailer\Exception;
-   use PHPMailer\PHPMailer\SMTP;
-   use PHPMailer\PHPMailer\PHPMailer;
-   $mensagem = utf8_decode($_POST['comentario_contato']);
-    $nome = utf8_decode($_POST['nome_contato']);
-    $email = utf8_decode($_POST['email_contato']);
+
+    $nome = $_POST['nome_contato'];
+    $email = $_POST['email_contato'];
+    $comentario = $_POST['comentario_contato'];
+
     require 'PHPMailer/php-mailer/PHPMailerAutoload.php';
-    require 'PHPMailer.php';
-    require  'SMTP.php';
-    require 'Exception.php';
 
-    $mail = new PHPMailer;
+    $mail = new PHPMailer();
     $mail->isSMTP();
-    //congiguração do servidor de E-mail
 
-    $mail->Host = "smtp.yahoo.com.";
-    $mail->Port= "587";
-    $mail->SMTPAuth = true;
-    $mail->SMTPSecure= "tls";
-    $mail->Username= "fogodechaochurras@yahoo.com";
-    $mail->Password="Crismora40";
-   
+    // Configurações do servidor de email
+    $mail->Host = 'smtp.office365.com';
+    $mail->Port = '587';
+    $mail->SMTPSecure = 'STARTTLS';
+    $mail->SMTPAuth = 'true';
+    $mail->Username = 'chufogodechao@outlook.com';
+    $mail->Password = 'Crismora40';
 
-    //configuração da mensagem
-    $mail->setFrom($mail->Username,"Seu Nome"); //remetente
-    $mail->addAddress('fogodechaochurras@yahoo.com'); //Destinatario
-    $mail->Subject = "Fale Conosco"; //Assunto do E-mail
+    // Configuração de mensagem
+    $mail->setFrom($mail->Username, "Alerta fogo de chao"); // remetente(sistema)
+    $mail->addAddress($mail->Username);                
+
+    $mail->Subject = "Sua mensagem foi enviada com sucesso!!";
 
     $conteudo_email = "
-    VocÊ recebeu uma mensagem de $nome ($email): <br><br>
-
-    Mensagem<br>
-    $mensagem
+    Voce recebeu uma mensagem de $nome ($email):
+    <br>
+    Mensagem: <br>
+    $comentario
     ";
-
-    $mail->isHTML(true);
+    $mail->IsHTML(true);
     $mail->Body = $conteudo_email;
 
-    if ( $mail->send()){
+    if ($mail->send())
+    {
         echo "E-mail enviado com sucesso!";
-    }else{
-        echo "Falha ao enviar o e-mail:" .$mail->ErrorInfo;
     }
-?>
+    else
+    {
+        echo "Falha ao enviar o e-mail " . $mail->ErrorInfo;
+    }
 
-<!DOCTYPE html>
-<html lang="e">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    body{
-        background-color: #f1f1f1f1;
-    }
-</style>
-<body>
-    
-</body>
-</html>
+    if($mail->send()){
+        header('location: index.php');
+}
+
+?>
